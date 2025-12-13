@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Math AI – Documentazione</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f0f0f0;
+      width: 35%;
+    }
+    code {
+      background-color: #f8f8f8;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    hr {
+      margin: 50px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>AI Didattica – Documentazione</h1>
+<p>
+  Libreria Java per lo studio didattico dell’Intelligenza Artificiale
+  (regressione lineare e reti neurali).
+</p>
+
+<hr />
+
+<!-- INPUTVALUE ----------------------------------------------------- -->
+<h2 id="InputValue">InputValue</h2>
+<p>
+  <b>Descrizione:</b> Rappresenta l’input di un modello.
+  Può essere scalare (1 valore) o vettoriale (più valori).
+</p>
+
+<h3>Costruttori</h3>
+<table>
+  <tr>
+    <th>Firma</th>
+    <th>Descrizione</th>
+  </tr>
+  <tr>
+    <td><code>InputValue(double x)</code></td>
+    <td>Crea un input scalare.</td>
+  </tr>
+  <tr>
+    <td><code>InputValue(double... x)</code></td>
+    <td>Crea un input vettoriale (ND).</td>
+  </tr>
+</table>
+
+<h3>Metodi pubblici</h3>
+<table>
+  <tr>
+    <th>Firma</th>
+    <th>Descrizione</th>
+  </tr>
+  <tr>
+    <td><code>double get()</code></td>
+    <td>Restituisce il primo valore (caso 1D).</td>
+  </tr>
+  <tr>
+    <td><code>double[] getVector()</code></td>
+    <td>Restituisce l’input come vettore.</td>
+  </tr>
+</table>
+
+<hr />
+
+<!-- MODEL ----------------------------------------------------- -->
+<h2 id="Model">Model</h2>
+<p>
+  <b>Descrizione:</b> Classe astratta base per tutti i modelli di apprendimento.
+</p>
+
+<h3>Metodi pubblici</h3>
+<table>
+  <tr>
+    <th>Firma</th>
+    <th>Descrizione</th>
+  </tr>
+  <tr>
+    <td><code>double predict(InputValue x)</code></td>
+    <td>Calcola la predizione per un singolo input.</td>
+  </tr>
+  <tr>
+    <td><code>double[] predictAll(InputValue[] X)</code></td>
+    <td>Calcola le predizioni per più input.</td>
+  </tr>
+</table>
+
+<hr />
+
+<!-- TRAINABLE ----------------------------------------------------- -->
+<h2 id="Trainable">Trainable</h2>
+<p>
+  <b>Descrizione:</b> Interfaccia per i modelli che possono essere addestrati.
+</p>
+
+<h3>Metodi</h3>
+<table>
+  <tr>
+    <th>Firma</th>
+    <th>Descrizione</th>
+  </tr>
+  <tr>
+    <td><code>void train(InputValue[] X, double[] Y, double lr, int epochs)</code></td>
+    <td>Addestra il modello su un dataset.</td>
+  </tr>
+  <tr>
+    <td><code>double loss(InputValue[] X, double[] Y)</code></td>
+    <td>Calcola l’errore MSE sul dataset.</td>
+  </tr>
+</table>
+
+<hr />
+
+<!-- LINEAR REGRESSION -------------------------------------------- -->
+<h2 id="LinearRegression1D">LinearRegression1D</h2>
+<p>
+  <b>Descrizione:</b> Modello di regressione lineare del tipo
+  <code>y = m·x + q</code>.
+</p>
+
+<h3>Caratteristiche</h3>
+<ul>
+  <li>Output sempre scalare</li>
+  <li>Addestramento con discesa del gradiente</li>
+  <li>Usa MSE come funzione di errore</li>
+</ul>
+
+<hr />
+
+<!-- NEURAL LAYER -------------------------------------------------- -->
+<h2 id="NeuralLayer">NeuralLayer</h2>
+<p>
+  <b>Descrizione:</b> Rappresenta un vero layer neurale:
+  <b>pesi + bias + funzione di attivazione</b>.
+</p>
+
+<h3>Costruttore</h3>
+<table>
+  <tr>
+    <th>Firma</th>
+    <th>Descrizione</th>
+  </tr>
+  <tr>
+    <td><code>NeuralLayer(int in, int out, Activation a)</code></td>
+    <td>Crea un layer con <code>in</code> ingressi e <code>out</code> neuroni.</td>
+  </tr>
+</table>
+
+<hr />
+
+<!-- NEURAL NETWORK ------------------------------------------------ -->
+<h2 id="NeuralNetwork">NeuralNetwork</h2>
+<p>
+  <b>Descrizione:</b> Rete neurale feed-forward composta da più
+  <code>NeuralLayer</code>.
+</p>
+
+<h3>Esempio</h3>
+<pre>
+NeuralNetwork nn = new NeuralNetwork();
+nn.add(new NeuralLayer(2, 3, Activation.SIGMOID));
+nn.add(new NeuralLayer(3, 1, Activation.SIGMOID));
+</pre>
+
+<hr />
+
+<p><i>Documentazione generata per uso didattico.</i></p>
+
+</body>
+</html>
