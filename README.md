@@ -10,7 +10,6 @@ La libreria permette di programmare:
 * esempi classici come **AND**, **OR**, **XOR**
 * sia in **1D** che in **ND (input vettoriale)**
 
-👉 con **codice semplice**, **senza array di array**, e con concetti coerenti con la teoria.
 
 ---
 
