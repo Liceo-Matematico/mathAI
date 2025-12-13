@@ -58,6 +58,8 @@ src/
         └── NeuralNetwork.java
 ```
 
+[Diagramma UML delle classi](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=auto#G1sHbbP6uqt1N2lr084Vno-ffFMHj9ZF5Z#%7B%22pageId%22%3A%22E8IC1CKlQg0O-PfBQdys%22%7D)
+
 ---
 
 ## 🧩 Concetti fondamentali
