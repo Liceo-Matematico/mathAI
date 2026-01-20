@@ -2,7 +2,10 @@ package math_ai.regression;
 
 import math_ai.core.*;
 
-public class LinearRegression1D extends Model implements Trainable {
+public class LinearRegression1D extends Mo
++
+
+del implements Trainable {
 
     private double m = 0.0;
     private double q = 0.0;
@@ -11,8 +14,13 @@ public class LinearRegression1D extends Model implements Trainable {
     public double predict(InputValue x) {
         double v = x.get();       // usa il valore scalare
         return m * v + q;
+<<<<<<< HEAD
     }
 ciao
+=======
+    }    //ciao
+
+>>>>>>> 4e3a87c (prova)
     @Override
     public double predictTrain(InputValue x) {
         return predict(x);
