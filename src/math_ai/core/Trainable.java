@@ -3,6 +3,7 @@ package math_ai.core;
 public interface Trainable {
 
     /**
+     * 
      * Addestra il modello su un dataset:
      * X = array di input
      * Y = array di output (scalari)
