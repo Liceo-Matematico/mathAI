@@ -4,6 +4,7 @@ package math_ai.core;
 public abstract class Model {
 
     /**
+     * 
      * Predizione su un singolo input.
      */
     public abstract double predict(InputValue x);
