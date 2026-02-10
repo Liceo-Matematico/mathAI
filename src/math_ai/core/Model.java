@@ -19,7 +19,7 @@ public abstract class Model {
         return out;
     }
 
-    public String toString() {
+    public String toString() { 
         return "Modello: " + getClass().getSimpleName();
     }
 }
