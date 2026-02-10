@@ -30,7 +30,7 @@ ciao
     @Override
     public void train(InputValue[] X, double[] Y, double lr, int epochs) {
 
-        int n = X.length;
+        int n = X.length; 
 
         for (int e = 0; e < epochs; e++) {
 
