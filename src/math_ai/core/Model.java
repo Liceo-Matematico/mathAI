@@ -4,7 +4,6 @@ package math_ai.core;
 public abstract class Model {
 
     /**
-     * 
      * Predizione su un singolo input.
      */
     public abstract double predict(InputValue x);
@@ -20,7 +19,6 @@ public abstract class Model {
         return out;
     }
 
-    @Override
     public String toString() {
         return "Modello: " + getClass().getSimpleName();
     }
