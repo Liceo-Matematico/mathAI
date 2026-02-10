@@ -1,6 +1,5 @@
 package math_ai.core;
 
-// Test
 public abstract class Model {
 
     /**
@@ -11,8 +10,9 @@ public abstract class Model {
     /**
      * Predizione su molti input.
      */
-    public double[] predictAll(InputValue[] X) {
+    public double[] predictAll(InputValue[] X) { 
         double[] out = new double[X.length];
+        
         for (int i = 0; i < X.length; i++) {
             out[i] = predict(X[i]);
         }
