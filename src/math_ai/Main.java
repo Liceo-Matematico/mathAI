@@ -4,7 +4,6 @@ import math_ai.core.*;
 import math_ai.regression.*;
 import math_ai.neural.*;
 
-
 public class Main {
     public static void main(String[] args) {
 
