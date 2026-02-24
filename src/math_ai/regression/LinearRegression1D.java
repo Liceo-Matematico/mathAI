@@ -12,7 +12,7 @@ public class LinearRegression1D extends Model implements Trainable {
         double v = x.get();       // usa il valore scalare
         return m * v + q;
     }
-ciao
+
     @Override
     public double predictTrain(InputValue x) {
         return predict(x);
@@ -55,6 +55,6 @@ ciao
     public String toString() {
         return super.toString() +
                "\nm = " + m +
-               "\nq = " + q; aa
+               "\nq = " + q; 
     }
 }
