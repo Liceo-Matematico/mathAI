@@ -7,7 +7,6 @@ import math_ai.neural.*;
 
 public class Main {
     public static void main(String[] args) {
-
         
         // ====== Regressione lineare 1D: y = 2x ======
         InputValue[] X = {
