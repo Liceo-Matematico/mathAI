@@ -96,9 +96,32 @@ public class NeuralLayer extends Layer {
 
     @Override
     public String toString() {
-        return "NeuralLayer(" +
-               "in=" + W[0].length +
-               ", out=" + W.length +
-               ", activation=" + activation + ")";
+
+        String stringa = "";
+
+               for(int i = 0; i < W.length; i++){
+
+                stringa += i == 0? "[" : ",";
+
+                for(int j = 0; j < W[i].length; j++){
+
+                    stringa += j==0? "[" : ", "; 
+
+                   stringa +=  W[i][j];
+                }
+                 stringa +=  "]";
+               }
+
+               stringa += "] \nBias: ";
+
+                for(int i = 0; i < b.length; i++){
+
+                    stringa += i==0? "[" : ", "; 
+
+                   stringa +=  b[i];
+                }
+                 stringa += "]";
+
+               return stringa;
     }
 }

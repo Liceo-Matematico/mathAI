@@ -59,6 +59,14 @@ public class NeuralNetwork extends Model implements Trainable {
 
     @Override
     public String toString() {
-        return super.toString() + "\nNumero di layer: " + layers.size();
+
+        String stringa = super.toString() + "\nNumero di layer: " + layers.size() + "\n pesi: ";
+
+        for(int i = 0; i < layers.size(); i++){
+
+            stringa += layers.get(i).toString() + "\n";
+        }
+
+        return stringa;
     }
 }

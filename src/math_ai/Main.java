@@ -44,5 +44,7 @@ public class Main {
         System.out.println("0 XOR 1 -> " + nn.predict(new InputValue(0,1)));
         System.out.println("1 XOR 0 -> " + nn.predict(new InputValue(1,0)));
         System.out.println("1 XOR 1 -> " + nn.predict(new InputValue(1,1)));
+
+        System.out.println(nn);
     }
 }
