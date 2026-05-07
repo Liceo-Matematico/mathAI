@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
         
         // ====== Regressione lineare 1D: y = 2x ======
+        
         InputValue[] X = {
             new InputValue(1),
             new InputValue(2),
